@@ -16,3 +16,18 @@
 - const array = [1, 2, 3, 4, 5];
 - const index = array.map(n => n === 3 ? 30 : n );
 - result: [1, 2, 30, 4, 5]
+
+## Flattening
+```
+const biDimensionalArr = [11, [22, 33], [44, 55], [66, 77], 88, 99];
+const flattenArr = [].concat(...biDimensionalArr); // [11, 22, 33, 44, 55, 66, 77, 88, 99]
+```
+
+```
+function flattenMultiArray(arr) {
+    const flattened = [].concat(...arr);
+    return flattened.some(item => Array.isArray(item)) ? flattenMultiArray(flattened) : flattened;
+ }
+const multiDimensionalArr = [11, [22, 33], [44, [55, 66, [77, [88]], 99]]];
+const flatArr = flattenMultiArray(multiDimensionalArr); // [11, 22, 33, 44, 55, 66, 77, 88, 99]
+```
