@@ -41,3 +41,8 @@ const flatArr = flattenMultiArray(multiDimensionalArr); // [11, 22, 33, 44, 55, 
 ```
 array.filter(Boolean)
 ```
+
+## Combine several arrays
+```
+array1.concat(array2, array3, ..., arrayX)
+```
