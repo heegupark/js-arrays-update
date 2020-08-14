@@ -31,3 +31,13 @@ function flattenMultiArray(arr) {
 const multiDimensionalArr = [11, [22, 33], [44, [55, 66, [77, [88]], 99]]];
 const flatArr = flattenMultiArray(multiDimensionalArr); // [11, 22, 33, 44, 55, 66, 77, 88, 99]
 ```
+
+## Get unique values of an array
+```
+[...new Set([1, 2, 4, 4, 3])]
+```
+
+## Remove all falsy values from an array
+```
+array.filter(Boolean)
+```
